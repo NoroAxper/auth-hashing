@@ -15,7 +15,9 @@ const registerUser = async (req, res) => {
             data: {
                 username,
                 password: hash
-            }
+            },
+            select:
+            {username: true}
         })
         console.log("this is newUser: ", newUser)
         console.log("this is hash: ", hash)
